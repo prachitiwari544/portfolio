@@ -1,0 +1,63 @@
+        body {
+         font-family:'Open Sans', sans-serif;
+        }
+        h1 ,h2 ,h3{
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .nav-link.active ,.nav-link:hover{
+            text-decoration: underline 3px solid rgb(45, 96, 190);
+            text-underline-offset: 8px;
+        }
+        #contactBox{
+            border:3px solid rgb(45,96,190);
+        }
+        .submit{
+            background-color: rgb(143, 143, 143);
+        }
+        #contactBox:hover,.submit:hover{
+            background-color: rgb(45, 96, 190);
+        }
+        .bg-light{
+            background-color: rgba(31, 33, 36,1) !important;
+        }
+        .bg-dark{
+            background-color: rgb(13,17,18) !important;
+        }
+        .text{
+            color:rgb(202, 200, 200);
+        }
+        .project-container{
+            border: 1px solid #d7d7d75c;
+        }
+        .content-sticky{
+            position: sticky;
+            top: 25px;
+        }
+        ul{
+            list-style: none;
+        }
+        .tech-list{
+            border: 1px solid #d7d7d75c;
+            border-radius: 9999px;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-bottom: 3px;
+        }
+        img{
+            max-width:100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 600px) {
+            .w-75{
+                width: 100% !important;
+            }
+            .menu-drop{
+                width: 30%;
+            }
+            .fs-1 ,h1{
+                font-size: 36px !important;
+            }
+            
+        }

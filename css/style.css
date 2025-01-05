@@ -28,7 +28,11 @@
             color:rgb(202, 200, 200);
         }
         .project-container{
-            border: 1px solid #d7d7d75c;
+            border: 1px solid #5a5a5a5c;
+            position: relative;
+        }
+        .project-container:hover{
+            background-color:rgb(32, 33, 36);
         }
         .content-sticky{
             position: sticky;

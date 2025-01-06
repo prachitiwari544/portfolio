@@ -5,8 +5,15 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        .nav-link.active ,.nav-link:hover{
-            text-decoration: underline 3px solid rgb(45, 96, 190);
+        .nav-link:hover {
+            text-decoration: underline 2px solid rgb(45, 96, 190);
+            text-underline-offset: 8px;
+        }
+        .reach-out{
+            text-decoration :none;
+        }
+        .reach-out:hover{
+            text-decoration: underline 2px solid rgb(45, 96, 190);
             text-underline-offset: 8px;
         }
         #contactBox{

@@ -5,25 +5,19 @@
             font-family: 'Montserrat', sans-serif;
         }
 
-        .nav-link:hover {
+        .nav-link:hover{
             text-decoration: underline 2px solid rgb(45, 96, 190);
             text-underline-offset: 8px;
         }
         .reach-out{
             text-decoration :none;
         }
-        .reach-out:hover{
+        .reach-out:hover ,#seeAll:hover{
             text-decoration: underline 2px solid rgb(45, 96, 190);
             text-underline-offset: 8px;
         }
-        #contactBox{
-            border:3px solid rgb(45,96,190);
-        }
         .submit{
             background-color: rgb(143, 143, 143);
-        }
-        #contactBox:hover,.submit:hover{
-            background-color: rgb(45, 96, 190);
         }
         .bg-light{
             background-color: rgba(31, 33, 36,1) !important;
@@ -37,9 +31,19 @@
         .project-container{
             border: 1px solid #5a5a5a5c;
             position: relative;
+            overflow: hidden;
         }
         .project-container:hover{
             background-color:rgb(32, 33, 36);
+        }
+        #projects .project-container:hover{
+            background-color:rgb(61, 62, 65) ;
+        }
+        #projects .project-container img{
+            transition: 0.2s ease-in-out;
+        }
+        #projects .project-container:hover img{
+            transform: scale(1.02);
         }
         .content-sticky{
             position: sticky;
@@ -59,6 +63,22 @@
             max-width:100%;
             height: auto;
         }
+        #seeAll{
+            color: white;
+            text-decoration: none;
+            text-align:center;
+        }
+        #seeAllButton{
+            color:white;
+            text-decoration: none;
+            border: 1px solid rgb(45, 96, 190);
+        }
+        #seeAllButton:hover ,.submit:hover{
+            background-color: rgb(45, 96, 190);
+        }
+        .d-grid{
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
 
         @media screen and (max-width: 600px) {
             .w-75{
@@ -69,6 +89,9 @@
             }
             .fs-1 ,h1{
                 font-size: 36px !important;
+            }
+            .d-grid{
+                grid-template-columns: repeat(1, minmax(0, 1fr));
             }
             
         }

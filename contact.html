@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <base href="http://127.0.0.1:5500/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Portfolio</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <section id="contact" class="bg-light py-5 px-lg-5 px-4">
+        <div class="d-flex flex-column">
+            <div class="text pb-5">
+                <h2 class="text-white fs-1">Contact</h2>
+            </div>
+            <div class="d-flex flex-lg-row flex-column gap-4 pt-lg-5">
+                <div class="col-lg-6 d-flex flex-column gap-2 pb-lg-0 pb-3">
+                    <h3 class="text-white">Reach Out</h3>
+                    <div class="d-flex flex-column gap-3">
+                        <a href="mailto:tewari.prachi2004@gmai.com" class="text-white fs-5 reach-out"><i
+                                class="fa-solid fa-envelope text-white fs-4 pe-2"></i>tewari.prachi2004@gmail.com</a>
+                        <a href="https://github.com/prachitiwari544" class="text-white fs-5 reach-out"><i
+                                class="fa-brands fa-github text-white fs-4 pe-2"></i>GitHub</a>
+                        <a href="https://www.linkedin.com/in/prachitiwari544/" class="text-white fs-5 reach-out"><i
+                                class="fa-brands fa-linkedin text-white fs-4 pe-2"></i>LinkedIn</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-flex flex-column gap-2">
+                    <h3 class="text-white">Or Send a Message</h3>
+                    <form id="contact-form">
+                        <div class="d-flex flex-column gap-3">
+                            <input type="text" placeholder="Name" name="Name" class="py-3 px-2" required>
+                            <input type="email" placeholder="Email" name="Email" class="py-3 px-2" required>
+                            <textarea placeholder="Message" rows="5" name="Message" class="py-3 px-2"
+                                required></textarea>
+                            <button type="submit" class="submit w-25 py-2">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="footer"></div>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("qsGNYBcEgr0h8XKKq");
+        })();
+        document.getElementById('contact-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            emailjs.sendForm('service_0xs9uzq', 'template_kn32zys', this)
+                .then(function () {
+                    alert('Your message has been reached. I will contact you soon!');
+                }, function (error) {
+                    alert('Failed to send message. Please try again later.');
+                    console.log(error);
+                });
+        });
+    </script>
+</body>
+
+</html>

@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <base href="https://prachitiwari544.github.io/portfolio/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Developer Portfolio</title>
@@ -17,32 +18,9 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2 px-3">
-            <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Prachi Tiwari</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse py-3" id="navbarNav">
-                    <ul class="navbar-nav ms-lg-auto gap-lg-3 gap-2 menu-drop">
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page"
-                                href="https://prachitiwari544.github.io/portfolio/">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#projects" class=" nav-link text-white">Projects</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#contact" class="nav-link text-white px-4" id="contactBox">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <section id="about" class="bg-light py-5 px-lg-5 px-4">
+    <div id="header"></div>
+
+    <section id="home-about" class="bg-light py-5 px-lg-5 px-4">
         <div class="d-flex flex-column gap-2 text py-lg-5">
             <div>
                 <h2 class="fs-3">Prachi Tiwari</h2>
@@ -73,12 +51,14 @@
         </div>
     </section>
 
-    <section id="projects" class="bg-dark  py-5 px-lg-5 px-4">
+    <section id="home-project" class="bg-dark  py-5 px-lg-5 px-4">
         <div class="d-flex flex-lg-row flex-column py-lg-5">
-            <div class="col-lg-4 text">
+            <div class="col-lg-4 text pb-4">
                 <div class="content-sticky">
                     <h2 class="text-white fs-1">Featured Projects</h2>
                     <p>A curated selection of my web projects.</p>
+                    <a href="project.html" id="seeAllButton" class="px-3 py-2">See All <i
+                            class="fa fa-arrow-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-8 d-flex flex-column gap-3 text">
@@ -99,7 +79,7 @@
                             featuring
                             blogs, ID cards,
                             assignments, user roles, categories, leads, registration and notifications.</p>
-                        <a href="./projects/school-web-app.html" class="stretched-link"></a>
+                        <a href="projects/school-web-app.html" class="stretched-link"></a>
                     </div>
                 </div>
                 <div class="p-lg-3 p-2 project-container d-flex flex-lg-row flex-column">
@@ -116,7 +96,7 @@
                         <p class="mb-0 pt-2">A dynamic and visually appealing wordpress website designed to showcase the
                             shop's extensive range of tiles, flooring, sinks, kitchen appliances, washbasins, and other
                             bath essentials.</p>
-                        <a href="./projects/alankar.html" class="stretched-link"></a>
+                        <a href="projects/alankar.html" class="stretched-link"></a>
                     </div>
                 </div>
                 <div class="p-lg-3 p-2 project-container d-flex flex-lg-row flex-column">
@@ -134,7 +114,7 @@
                         <p class="mb-0 pt-2">The Sol Glow Resort landing page is a vibrant and responsive platform
                             showcasing the resort's facilities, luxurious rooms, ambiance, and unique amenities to
                             engage customers and boost bookings.</p>
-                        <a href="./projects/sol-glow.html" class="stretched-link"></a>
+                        <a href="projects/sol-glow.html" class="stretched-link"></a>
                     </div>
                 </div>
                 <div class="p-lg-3 p-2 project-container d-flex flex-lg-row flex-column">
@@ -151,14 +131,16 @@
                         <p class="mb-0 pt-2">The Maharaja Hotel WordPress landing page highlights the hotel's elegance,
                             premium rooms, and services with a responsive design to engage visitors and drive bookings.
                         </p>
-                        <a href="./projects/maharaja-hotel.html" class="stretched-link"></a>
+                        <a href="projects/maharaja-hotel.html" class="stretched-link"></a>
                     </div>
                 </div>
+                <a href="project.html" id="seeAll">See All <i class="fa fa-arrow-right"></i></a>
             </div>
+
         </div>
     </section>
 
-    <section id="contact" class="bg-light py-5 px-lg-5 px-4">
+    <section id="home-contact" class="bg-light py-5 px-lg-5 px-4">
         <div class="d-flex flex-lg-row justify-content-between flex-column py-lg-5">
             <div class="col-lg-5 text pb-3">
                 <div class="content-sticky">
@@ -188,18 +170,8 @@
             </div>
         </div>
     </section>
+    <div id="footer"></div>
 
-    <footer>
-        <div class="container-fluid bg-dark py-5">
-            <div class="d-flex flex-row justify-content-center gap-4 py-4">
-                <a href="mailto:tewari.prachi2004@gmai.com"><i class="fa-solid fa-envelope text-white fs-3"></i></a>
-                <a href="https://github.com/prachitiwari544"><i class="fa-brands fa-github text-white fs-3"></i></a>
-                <a href="https://www.linkedin.com/in/prachitiwari544/"><i
-                        class="fa-brands fa-linkedin text-white fs-3"></i></a>
-            </div>
-            <p class="text-white text-center">&copy;2024 Prachi Tiwari</p>
-        </div>
-    </footer>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
         (function () {
@@ -216,6 +188,7 @@
                 });
         });
     </script>
+    <script src="./js/index.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 
